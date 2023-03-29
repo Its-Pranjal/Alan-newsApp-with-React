@@ -1,11 +1,10 @@
 import React from 'react';
-import { Typography, Divider, Chip, TextField, Button } from '@material-ui/core';
-import SimpleModal from '@material-ui/core/Modal';
-import emailjs from 'emailjs-com';
+import { Typography, Divider, Chip, TextField, Button } from '@mui/material';
 
-import useStyles from './styles';
+import emailjs from '@emailjs/browser';
+import useStyles from './styles.js';
 
-const Modal = ({ isOpen, setIsOpen, showFeedback }) => {
+function Modal({ isOpen, setIsOpen, showFeedback }) {
   const classes = useStyles();
   let body;
 
@@ -51,7 +50,9 @@ const Modal = ({ isOpen, setIsOpen, showFeedback }) => {
         <Divider />
         <div className={classes.infoContainer}>
           <Typography variant="h5">News by Sources</Typography>
-          <div className={classes.chipContainer}>{['CNN', 'Wired', 'BBC News', 'Time', 'IGN', 'Buzzfeed', 'ABC News'].map((source) => <Chip label={source} color="primary" className={classes.chip} />)}<Chip label="...and more" className={classes.chip} /></div>
+          <div className={classes.chipContainer}>
+            {['CNN', 'Wired', 'BBC News', 'Time', 'IGN', 'Buzzfeed', 'ABC News'].map((source) => <Chip label={source} color="primary" className={classes.chip} />)}<Chip label="...and more" className={classes.chip} />
+          </div>
         </div>
         <Typography variant="body1" className={classes.trySaying}>Try saying: &quot;Give me the news from <strong><em>CNN</em></strong>&quot;</Typography>
       </div>
@@ -59,10 +60,10 @@ const Modal = ({ isOpen, setIsOpen, showFeedback }) => {
   }
 
   return (
-    <SimpleModal open={isOpen} onClose={() => setIsOpen(false)}>
+    <Modal open={isOpen} onClose={() => setIsOpen(false)}>
       {body}
-    </SimpleModal>
+    </Modal>
   );
-};
+}
 
 export default Modal;

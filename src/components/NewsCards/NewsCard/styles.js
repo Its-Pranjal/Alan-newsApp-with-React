@@ -1,6 +1,6 @@
 import { styled } from '@mui/material/styles';
 
-const StyledComponent = styled(ComponentName)(({ theme }) => ({
+const useStyles = styled(() => ({
   media: {
     height: 250,
   },
@@ -36,3 +36,5 @@ const StyledComponent = styled(ComponentName)(({ theme }) => ({
     justifyContent: 'space-between',
   },
 }));
+
+export default useStyles;
