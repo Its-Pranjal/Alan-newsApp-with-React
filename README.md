@@ -1,70 +1,120 @@
-# Getting Started with Create React App
+# 📰 Personalized News & Blog Feed App with Alan AI (MERN Stack)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📌 Overview
 
-## Available Scripts
+This project is a full-stack web application built using the **MERN stack** (MongoDB, Express.js, React, Node.js) and **Alan AI** for voice interaction. It allows users to:
 
-In the project directory, you can run:
+- Create a profile and input their interests
+- Receive personalized news and blog content
+- Track search history and activity
+- Get niche and relevant content recommendations
+- Interact with the app using voice commands via Alan AI
 
-### `npm start`
+## 🚀 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🔐 User Authentication (Sign Up / Login)
+- 🧠 Interest-based content personalization
+- 📚 Blog and news aggregation using external APIs
+- 🗂️ Archive and reading list functionality
+- 🔍 Search history tracking and analytics
+- 🎙️ Voice control with Alan AI
+- 📊 AI-powered recommendations and feed optimization
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tech Stack
 
-### `npm test`
+- **Frontend**: React, Material-UI
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB (hosted on MongoDB Atlas)
+- **AI Integration**: Alan AI (Voice Assistant)
+- **Deployment**: Netlify (Frontend), Heroku (Backend)
+- **External APIs**: News API, Summarization API
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📦 Installation
 
-### `npm run build`
+### 1. Clone the Repository
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 2. Set Up Environment Variables
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Create a `.env` file in both `client` and `server` directories:
 
-### `npm run eject`
+#### Server `.env`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```env
+MONGO_URI=your_mongodb_connection_string
+NEWS_API_KEY=your_news_api_key
+SUMMARIZATION_API_KEY=your_summarization_api_key
+JWT_SECRET=your_jwt_secret
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Client `.env`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```env
+REACT_APP_ALAN_KEY=your_alan_ai_key
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 3. Install Dependencies
 
-## Learn More
+```bash
+# Backend
+cd server
+npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Frontend
+cd ../client
+npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 4. Run the Application
 
-### Code Splitting
+```bash
+# Backend
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Frontend
+npm start
+```
 
-### Analyzing the Bundle Size
+## 🧠 Alan AI Integration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Alan AI enables voice control for the app. You can say things like:
 
-### Making a Progressive Web App
+- "Show me tech news"
+- "Add this article to my reading list"
+- "Search for climate blogs"
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Refer to [Alan AI documentation](https://alan.app/) for custom voice command setup.
 
-### Advanced Configuration
+## 📊 Personalization Logic
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- User interests are stored in MongoDB
+- Search history is tracked and analyzed
+- Feed is dynamically generated using:
+  - Keyword matching
+  - Category filtering
+  - AI-based recommendation engine
 
-### Deployment
+## 🧪 Testing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Use Postman or built-in test scripts to verify:
 
-### `npm run build` fails to minify
+- User registration/login
+- Interest submission
+- Feed generation
+- Search tracking
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📌 Future Enhancements
+
+- 🧠 Machine learning-based feed optimization
+- 📈 User analytics dashboard
+- 🌐 Multi-language support
+- 📱 Mobile app version
+
+## 🙌 Contributors
+
+- Pranjal Chaurasiya, Raj Kushwaha, Sonu Yadav, David Anthony, Prince
+
